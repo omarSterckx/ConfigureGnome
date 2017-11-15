@@ -6,6 +6,19 @@
 
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 
+# Collect and install must have apps
+sudo add-apt-repository -y ppa:nilarimogard/webupd8
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+sudo echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo add-apt-repository -y ppa:webupd8team/terminix
+sudo add-apt-repository -y ppa:webupd8team/atom
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-key adv --keyserver pool.sks-keyservers.net --recv 6DDA23616E3FE905FFDA152AE61DA9241537994D
+echo "deb https://dl.bintray.com/aluxian/deb/ <channel> main" | sudo tee -a /etc/apt/sources.list.d/aluxian.list
+sudo apt update
+sudo apt install -y albert atom google-chrome-stable spotify-client tilix vlc android-tools-adb android-tools-fastboot autoconf automake htop libgtk-3-dev git openjdk-8-jdk pkg-config virtualbox virtualbox-dkms virtualbox-ext-pack virtualbox-guest-additions-iso virtualbox-guest-utils
+
 # block invasive Adware
 echo "# Invasive Adware
 127.0.0.1 ads.pubmatic.com
@@ -90,18 +103,6 @@ unzip /tmp/numix-cursor-theme.zip -d /tmp/numix-cursor
 sudo mv /tmp/numix-cursor/numix-cursor-theme-master/Numix-Light /usr/share/icons
 gsettings set org.gnome.desktop.interface cursor-theme 'Numix-Light'
 
-# Collect and install must have apps
-sudo add-apt-repository -y ppa:nilarimogard/webupd8
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
-sudo echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo add-apt-repository -y ppa:webupd8team/terminix
-sudo add-apt-repository -y ppa:webupd8team/atom
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-key adv --keyserver pool.sks-keyservers.net --recv 6DDA23616E3FE905FFDA152AE61DA9241537994D
-echo "deb https://dl.bintray.com/aluxian/deb/ <channel> main" | sudo tee -a /etc/apt/sources.list.d/aluxian.list
-sudo apt update
-sudo apt install -y albert atom google-chrome-stable messengerfordesktop spotify-client tilix vlc android-tools-adb android-tools-fastboot autoconf automake htop libgtk-3-dev git openjdk-8-jdk pkg-config virtualbox virtualbox-dkms virtualbox-ext-pack virtualbox-guest-additions-iso virtualbox-guest-utils
 
 # Stremio
 wget -O /tmp/stremio.tar.gz http://dl.strem.io/Stremio3.6.5.linux.tar.gz
