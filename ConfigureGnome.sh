@@ -152,6 +152,10 @@ sudo cp /usr/share/applications/albert.desktop ~/.config/autostart/albert.deskto
 # Make tilix the default terminal emulator
 gsettings set org.gnome.desktop.default-applications.terminal exec 'tilix'
 
+# Set wallpaper
+wget /Documents https://github.com/omarSterckx/ConfigureGnome/blob/master/Animals-snow-leopard-Full-HD-1920x1080-Wallpapers-download-desktop-wallpapers-amazing-background-images-mac-desktop-wallpapers-free-pictures-smart-phone-1920x1080.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///home/omar/Documents/Animals-snow-leopard-Full-HD-1920x1080-Wallpapers-download-desktop-wallpapers-amazing-background-images-mac-desktop-wallpapers-free-pictures-smart-phone-1920x1080.jpg
+
 # Finish off in a clean manner
 sudo apt autoremove -y
 clear
