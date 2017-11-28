@@ -89,7 +89,7 @@ gsettings set org.gnome.shell enabled-extensions "['clipboard-indicator@tudmotu.
 # Install gtk theme (matcha)
 git clone https://github.com/omarSterckx/matcha /tmp/matcha
 /tmp/matcha/Install
-gsettings set org.gnome.shell.extensions.user-theme name 'Matcha'
+gsettings set org.gnome.shell.extensions.user-theme name 'Matcha-Dark'
 
 # Set global dark theme
 echo -e "[Settings]\ngtk-application-prefer-dark-theme=1" | tee ~/.config/gtk-3.0/settings.ini
