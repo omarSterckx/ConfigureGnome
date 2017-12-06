@@ -20,7 +20,7 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 sudo apt-key adv --keyserver pool.sks-keyservers.net --recv 6DDA23616E3FE905FFDA152AE61DA9241537994D
 echo "deb https://dl.bintray.com/aluxian/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/aluxian.list
 sudo apt update
-sudo apt install -y albert atom google-chrome-stable spotify-client mesengerfordesktop tilix vlc android-tools-adb android-tools-fastboot autoconf automake htop libgtk-3-dev git openjdk-8-jdk pkg-config virtualbox virtualbox-dkms virtualbox-ext-pack virtualbox-guest-additions-iso virtualbox-guest-utils
+sudo apt install -y albert atom google-chrome-stable spotify-client gparted messengerfordesktop tilix vlc android-tools-adb android-tools-fastboot autoconf automake htop libgtk-3-dev git openjdk-8-jdk pkg-config virtualbox virtualbox-dkms virtualbox-ext-pack virtualbox-guest-additions-iso virtualbox-guest-utils
 
 # block invasive Adware
 echo "# Invasive Adware
